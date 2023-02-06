@@ -1,0 +1,8 @@
+**/*.html
+**/*.xml
+
+# log file
+**/*.log
+
+# image screenshot
+**/*.png
