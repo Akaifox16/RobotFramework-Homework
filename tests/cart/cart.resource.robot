@@ -31,14 +31,20 @@ Click Checkout Button
 Click Continue Button
     Click Button    continue
 
+Click Add To Cart ${item}
+    Click Button    add-to-cart-${item}
+
+Click Remove ${item}
+    Click Button    remove-${item}
+
 Click All Add To Cart Buttons
     FOR    ${key}    IN    @{BUTTON}
-        Click Button    add-to-cart-${BUTTON}[${key}] 
+        Click Add To Cart ${BUTTON}[${key}]
     END
 
 Click All Remove Buttons
     FOR    ${key}    IN    @{BUTTON}
-       Click Button    remove-${BUTTON}[${key}] 
+        Click Remove ${BUTTON}[${key}]
     END
 
 Cart Should Be Empty
@@ -48,6 +54,18 @@ Cart Should Be Empty
 
 Cart Should Contain ${amount} items
     Page Should Contain Element    xpath=//a[@class='shopping_cart_link']/span[text()='${amount}']
+
+Cart Should Contain Backpack
+    Wait Until Element Is Visible    xpath=//*[@id="item_4_title_link"]/div
+    Element Text Should Be    xpath=//*[@id="item_4_title_link"]/div    Sauce Labs Backpack
+
+Cart Should Contains All Inventories
+    Element Text Should Be    xpath=//*[@id="item_4_title_link"]/div    Sauce Labs Backpack
+    Element Text Should Be    xpath=//*[@id="item_0_title_link"]/div    Sauce Labs Bike Light
+    Element Text Should Be    xpath=//*[@id="item_1_title_link"]/div    Sauce Labs Bolt T-Shirt
+    Element Text Should Be    xpath=//*[@id="item_5_title_link"]/div    Sauce Labs Fleece Jacket
+    Element Text Should Be    xpath=//*[@id="item_2_title_link"]/div    Sauce Labs Onesie
+    Element Text Should Be    xpath=//*[@id="item_3_title_link"]/div    Test.allTheThings() T-Shirt (Red)
 
 Page Should Show Required Input Error Message
     Page Should Contain    is required
