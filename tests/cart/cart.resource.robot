@@ -21,7 +21,7 @@ Browser Is Opened To Cart Page
     Open Browser To "${CART}" Page
 
 Click Cart Button
-    Click Button    shopping_cart_link
+    Click Link    //a[@class="shopping_cart_link"]
     "${CART}" Page Should Be Open
 
 Click Checkout Button
