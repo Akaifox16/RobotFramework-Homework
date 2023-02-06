@@ -3,7 +3,7 @@ Resource  cart.resource.robot
 Test Teardown  Close Browser
 
 *** Test Cases ***
-Problem User Login
+Problem User Check if click all add to cart buttons functionality
    Given browser is opened to inventory page
    And "${PB USER}" is logged in
    When click all add to cart buttons
