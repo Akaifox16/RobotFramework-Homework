@@ -5,12 +5,12 @@ Library     SeleniumLibrary
 
 *** Variables ***
 &{BUTTON}
-...    backpack=sauce-labs-backpack
-...    bike=sauce-labs-bike-light
-...    bolt=sauce-labs-bolt-t-shirt
-...    jacket=sauce-labs-fleece-jacket
-...    onesie=sauce-labs-onesie
-...    t-shirt=test.allthethings()-t-shirt-(red)
+...             backpack=sauce-labs-backpack
+...             bike=sauce-labs-bike-light
+...             bolt=sauce-labs-bolt-t-shirt
+...             jacket=sauce-labs-fleece-jacket
+...             onesie=sauce-labs-onesie
+...             t-shirt=test.allthethings()-t-shirt-(red)
 
 
 *** Keywords ***
@@ -69,3 +69,4 @@ Cart Should Contains All Inventories
 
 Page Should Show Required Input Error Message
     Page Should Contain    is required
+
