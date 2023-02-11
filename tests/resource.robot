@@ -21,6 +21,7 @@ ${INVENTORY}        https://${SERVER}/inventory.html
 ${CART}             https://${SERVER}/cart.html
 ${CHECK-OUT1}       https://${SERVER}/checkout-step-one.html
 ${CHECK-OUT2}       https://${SERVER}/checkout-step-two.html
+${COMPLETE}       https://${SERVER}/checkout-complete.html
 
 
 *** Keywords ***
